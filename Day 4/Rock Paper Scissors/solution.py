@@ -42,12 +42,12 @@ print(game_images[computer_choice])
 
 if user_choice >= 3 or user_choice < 0:
     print("You typed an invalid number. You lose!")
-elif user_choice == 0 and computer_choice == 2:
+elif user_choice == 0 and computer_choice == 2:     # u:rock[0] | c:scissor[2]
     print("You win!")
-elif computer_choice == 0 and user_choice == 2:
+elif computer_choice == 0 and user_choice == 2:     # c:rock[0] | u:scissor[2]
     print("You lose!")
-elif computer_choice > user_choice:
-    print("You lose!")
+elif computer_choice > user_choice: # c:[1]paper| u:[0]rock AND c:[2]scissor | u:[1]paper
+    print("You lose!")              # but if c:[2]scissor | u:[0]rock then go to 1st condition
 elif user_choice > computer_choice:
     print("You win!")
 elif computer_choice == user_choice:
